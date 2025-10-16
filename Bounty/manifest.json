@@ -1,0 +1,144 @@
+{
+  "last_updated": "2025-10-16",
+  "documents": [
+    {
+      "id": "live-hacking-playbook",
+      "path": "llm_reference/live-hacking-tips-reference.md",
+      "title": "Live Hacking Playbook (Frans Rosén)",
+      "source": "Live Hacking Tips and Tricks - Frans Rosen.md",
+      "topics": ["bug bounty", "live hacking events"],
+      "summary": "Step-by-step preparation guide for live hacking engagements covering scope intake, team coordination, recon priorities, tooling, and illustrative incident narratives.",
+      "key_sections": [
+        "Overview",
+        "Event Flow",
+        "Team Strategy",
+        "Recon Priorities",
+        "Tooling And Notes",
+        "Case Study Signals"
+      ],
+      "recommended_prompts": [
+        "Outline a day-of-action checklist for a HackerOne live hacking event using the provided playbook.",
+        "Suggest collaboration workflows for a two-person team targeting enterprise SaaS programs at a live event."
+      ]
+    },
+    {
+      "id": "bug-bounties-with-bash",
+      "path": "llm_reference/bug-bounties-with-bash-reference.md",
+      "title": "Bug Bounties With Bash (TomNomNom)",
+      "source": "bug_bounties_with_bash_tomnomnom.md",
+      "topics": ["bug bounty", "automation", "bash"],
+      "summary": "Practical Bash automation patterns for recon: logging wrappers, subdomain enumeration loops, bulk fetching, and pipeline tuning with concrete command snippets.",
+      "key_sections": [
+        "Core Principles",
+        "Essential Utilities",
+        "Subdomain Workflow",
+        "Fetching And Filtering",
+        "Tuning Pipelines"
+      ],
+      "recommended_prompts": [
+        "Generate a Bash script template that mirrors TomNomNom's workflow for enumerating and probing subdomains.",
+        "Explain how to capture recon transcripts safely when running high-volume shell commands."
+      ]
+    },
+    {
+      "id": "recon-cheat-sheet-2019",
+      "path": "llm_reference/recon-cheat-sheet-reference.md",
+      "title": "Recon Cheat Sheet 2019 Highlights",
+      "source": "Recon Cheat Sheet 2019 - HackerOne.md",
+      "topics": ["bug bounty", "reconnaissance"],
+      "summary": "Reconnaissance playbook spanning code leak hunting, directory fuzzing, asset discovery, and certificate transparency with tooling combos and payout anecdotes.",
+      "key_sections": [
+        "Digital Dumpster Diving",
+        "Content Discovery",
+        "Asset Discovery",
+        "Certificate Transparency",
+        "Knowledge Base Notes"
+      ],
+      "recommended_prompts": [
+        "Prioritize recon activities for a newly in-scope acquisition using the cheat sheet.",
+        "Draft a responsible disclosure outline for FTP credentials discovered via dumpster diving."
+      ]
+    },
+    {
+      "id": "complete-guide-to-shodan",
+      "path": "llm_reference/complete-guide-to-shodan-reference.md",
+      "title": "Complete Guide to Shodan – Key Takeaways",
+      "source": "complete_guide_to_shodan.md",
+      "topics": ["internet scanning", "shodan"],
+      "summary": "Reference on Shodan's data model, banner structure, SSL probing, and CLI/API usage including sample JSON snippets and multi-filter queries.",
+      "key_sections": [
+        "Overview",
+        "Banner Anatomy",
+        "Crawling Model",
+        "SSL Deep Dive",
+        "Leveraging Results",
+        "Knowledge Base Notes"
+      ],
+      "recommended_prompts": [
+        "Summarize exposed services for a given organization using the Shodan CLI filters.",
+        "Explain how to interpret Shodan SSL fields when triaging weak cipher suites."
+      ]
+    },
+    {
+      "id": "zseanos-methodology",
+      "path": "llm_reference/zseanos-bug-bounty-methodology-reference.md",
+      "title": "Zseano’s Bug Bounty Methodology",
+      "source": "Zseano's Bug Bounty Methodology.md",
+      "topics": ["bug bounty", "web hacking", "mindset"],
+      "summary": "Mindset-focused methodology emphasizing ethical hunting, structured note-taking, feature mapping, and a detailed XSS testing checklist with payload logging guidance.",
+      "key_sections": [
+        "Philosophy",
+        "Getting Started",
+        "Program Approach",
+        "XSS Testing Flow",
+        "Knowledge Base Notes"
+      ],
+      "recommended_prompts": [
+        "Coach a newcomer through documenting findings using Zseano's note structure.",
+        "Walk through an XSS triage conversation that mirrors Zseano’s step-by-step process."
+      ]
+    },
+    {
+      "id": "attacking-secondary-contexts",
+      "path": "llm_reference/attacking_secondary_contexts_sam_curry.md",
+      "title": "Attacking Secondary Contexts in Web Applications",
+      "source": "Attacking Secondary Contexts in Web Applications (Sam Curry)",
+      "topics": ["web security", "request routing", "secondary contexts"],
+      "summary": "Explains how requests traverse proxies, CDNs, and internal APIs, with traversal, encoding, and header analysis tactics that expose hidden routing and authorization flaws; includes Authy 2FA bypass case study.",
+      "key_sections": [
+        "Overview",
+        "Investigation Checklist",
+        "Techniques for Spotting Hidden Routing",
+        "Field Notes and Examples",
+        "Case Study: Authy 2FA Bypass",
+        "Defensive Considerations",
+        "Key Takeaways"
+      ],
+      "recommended_prompts": [
+        "Outline a step-by-step plan to test for secondary context traversal vulnerabilities on a CDN-backed web app.",
+        "Summarize lessons from the Authy 2FA bypass for a security engineering briefing."
+      ]
+    },
+    {
+      "id": "mayo-critical-thinking",
+      "path": "llm_reference/mayo_critical_thinking_interview.md",
+      "title": "John Colston (Mayo) — Data-Driven Bug Bounty Playbook",
+      "source": "mayo_interview_transcript.md",
+      "topics": ["bug bounty", "automation", "data science"],
+      "summary": "Interview-style playbook detailing Mayo's data-instrumented recon system, automation funnel, wordlist engineering, cost governance, and B2B credential strategies.",
+      "key_sections": [
+        "Quick Facts",
+        "Automation Architecture Overview",
+        "Data & Wordlist Engineering",
+        "Data Sources & Scope Governance",
+        "Credential & Access Strategies",
+        "Prioritization & Workflow",
+        "FAQ Extract"
+      ],
+      "recommended_prompts": [
+        "Design a KPI logging schema for recon automation inspired by Mayo's methodology.",
+        "Suggest ways to adapt Mayo's ingredient/recipe wordlist model to a non-adtech bug bounty program."
+      ]
+    }
+  ]
+}
