@@ -1,20 +1,21 @@
 {
-  "last_updated": "2025-10-16",
+  "last_updated": "2025-10-20",
   "documents": [
     {
       "id": "live-hacking-playbook",
-      "path": "llm_reference/live-hacking-tips-reference.md",
+      "path": "Bounty/live-hacking-tips-reference.md",
       "title": "Live Hacking Playbook (Frans Rosén)",
       "source": "Live Hacking Tips and Tricks - Frans Rosen.md",
       "topics": ["bug bounty", "live hacking events"],
-      "summary": "Step-by-step preparation guide for live hacking engagements covering scope intake, team coordination, recon priorities, tooling, and illustrative incident narratives.",
+      "summary": "Structured guide for preparing and executing live hacking engagements, covering scope intake, team coordination, recon priorities, tooling workflows, and real-world signal stories.",
       "key_sections": [
         "Overview",
         "Event Flow",
         "Team Strategy",
         "Recon Priorities",
         "Tooling And Notes",
-        "Case Study Signals"
+        "Case Study Signals",
+        "Knowledge Base Tips"
       ],
       "recommended_prompts": [
         "Outline a day-of-action checklist for a HackerOne live hacking event using the provided playbook.",
@@ -23,7 +24,7 @@
     },
     {
       "id": "bug-bounties-with-bash",
-      "path": "llm_reference/bug-bounties-with-bash-reference.md",
+      "path": "Bounty/bug-bounties-with-bash-reference.md",
       "title": "Bug Bounties With Bash (TomNomNom)",
       "source": "bug_bounties_with_bash_tomnomnom.md",
       "topics": ["bug bounty", "automation", "bash"],
@@ -42,7 +43,7 @@
     },
     {
       "id": "recon-cheat-sheet-2019",
-      "path": "llm_reference/recon-cheat-sheet-reference.md",
+      "path": "Bounty/recon-cheat-sheet-reference.md",
       "title": "Recon Cheat Sheet 2019 Highlights",
       "source": "Recon Cheat Sheet 2019 - HackerOne.md",
       "topics": ["bug bounty", "reconnaissance"],
@@ -61,7 +62,7 @@
     },
     {
       "id": "complete-guide-to-shodan",
-      "path": "llm_reference/complete-guide-to-shodan-reference.md",
+      "path": "Bounty/complete-guide-to-shodan-reference.md",
       "title": "Complete Guide to Shodan – Key Takeaways",
       "source": "complete_guide_to_shodan.md",
       "topics": ["internet scanning", "shodan"],
@@ -81,7 +82,7 @@
     },
     {
       "id": "zseanos-methodology",
-      "path": "llm_reference/zseanos-bug-bounty-methodology-reference.md",
+      "path": "Bounty/zseanos-bug-bounty-methodology-reference.md",
       "title": "Zseano’s Bug Bounty Methodology",
       "source": "Zseano's Bug Bounty Methodology.md",
       "topics": ["bug bounty", "web hacking", "mindset"],
@@ -100,13 +101,15 @@
     },
     {
       "id": "attacking-secondary-contexts",
-      "path": "llm_reference/attacking_secondary_contexts_sam_curry.md",
+      "path": "Bounty/attacking_secondary_contexts_sam_curry.md",
       "title": "Attacking Secondary Contexts in Web Applications",
       "source": "Attacking Secondary Contexts in Web Applications (Sam Curry)",
       "topics": ["web security", "request routing", "secondary contexts"],
-      "summary": "Explains how requests traverse proxies, CDNs, and internal APIs, with traversal, encoding, and header analysis tactics that expose hidden routing and authorization flaws; includes Authy 2FA bypass case study.",
+      "summary": "Explores how requests traverse proxies, CDNs, and internal APIs, highlighting traversal tricks, header manipulation tactics, and the Authy 2FA bypass as a case study for compounding impact.",
       "key_sections": [
         "Overview",
+        "Presenter",
+        "Glossary",
         "Investigation Checklist",
         "Techniques for Spotting Hidden Routing",
         "Field Notes and Examples",
@@ -121,23 +124,48 @@
     },
     {
       "id": "mayo-critical-thinking",
-      "path": "llm_reference/mayo_critical_thinking_interview.md",
+      "path": "Bounty/mayo_critical_thinking_interview.md",
       "title": "John Colston (Mayo) — Data-Driven Bug Bounty Playbook",
       "source": "mayo_interview_transcript.md",
-      "topics": ["bug bounty", "automation", "data science"],
-      "summary": "Interview-style playbook detailing Mayo's data-instrumented recon system, automation funnel, wordlist engineering, cost governance, and B2B credential strategies.",
+      "topics": ["bug bounty", "automation", "data science", "digital marketing"],
+      "summary": "Interview-style playbook detailing Mayo's instrumentation-heavy recon system, KPI funnel, ingredient/recipe wordlists, cost governance, and burnout guardrails drawn from digital marketing experience.",
       "key_sections": [
         "Quick Facts",
+        "Core Philosophy & Mindset Hooks",
         "Automation Architecture Overview",
         "Data & Wordlist Engineering",
         "Data Sources & Scope Governance",
-        "Credential & Access Strategies",
-        "Prioritization & Workflow",
-        "FAQ Extract"
+        "Manual Analysis Loop",
+        "Conversion Funnel Metrics",
+        "Distribution & \"Moab\" Strategy",
+        "Personal Ops & Burnout Guardrails",
+        "Suggested Q&A Pairs"
       ],
       "recommended_prompts": [
         "Design a KPI logging schema for recon automation inspired by Mayo's methodology.",
         "Suggest ways to adapt Mayo's ingredient/recipe wordlist model to a non-adtech bug bounty program."
+      ]
+    },
+    {
+      "id": "x-correlation-injection",
+      "path": "Bounty/frans_xcorrelation.md",
+      "title": "HackerNotes Ep.86 — X-Correlation Injection Research",
+      "source": "Critical Thinking Podcast blog (Aug 30 2024)",
+      "topics": ["bug bounty", "header injection", "trace ids"],
+      "summary": "Research drop on abusing trace and correlation headers, covering discovery cues, fuzzing tactics, real-world findings, JSON injection angles, and remediation guardrails.",
+      "key_sections": [
+        "TL;DR",
+        "X-Correlation Injection",
+        "Fuzzing the Headers",
+        "Findings",
+        "Server-side JSON Injection",
+        "Detection Tips",
+        "Remediation Guidance",
+        "Key Takeaways"
+      ],
+      "recommended_prompts": [
+        "Draft a fuzzing playbook for correlation headers that balances error-based and out-of-band techniques.",
+        "Explain how to triage potential JSON injection when a trace header value propagates into server-side objects."
       ]
     }
   ]
